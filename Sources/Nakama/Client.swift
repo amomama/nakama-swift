@@ -305,7 +305,7 @@ internal class DefaultClient : Client, WebSocketDelegate {
       NSLog("Authenticate request: %@", message.description)
     }
     
-    let (p, fulfill, reject) = Promise<Session>.pending()
+    let (p, r) = Promise<Session>.pending()
     session.dataTask(with: request, completionHandler: { (data: Data?, rsp: URLResponse?, error: Error?) in
       
       // Connectivity issues
@@ -313,12 +313,12 @@ internal class DefaultClient : Client, WebSocketDelegate {
         if self.trace {
           NSLog("Authentication error: %@", error!.localizedDescription)
         }
-        reject(error!)
+        r.reject(error!)
         return
       }
       
       if let rsp = rsp as? HTTPURLResponse, rsp.statusCode >= 500 {
-        reject(NakamaError.runtimeException(String(format:"Internal Server Error - HTTP %@", rsp.statusCode)))
+        r.reject(NakamaError.runtimeException(String(format:"Internal Server Error - HTTP %@", rsp.statusCode)))
         return
       }
       
@@ -329,9 +329,9 @@ internal class DefaultClient : Client, WebSocketDelegate {
       
       switch authResponse.id! {
       case .error(let err):
-        reject(NakamaError.make(from: err.code, msg: err.message))
+        r.reject(NakamaError.make(from: err.code, msg: err.message))
       case .session(let s):
-        fulfill(DefaultSession(token: s.token))
+        r.fulfill(DefaultSession(token: s.token))
       }
     }).resume()
     return p
@@ -342,7 +342,7 @@ internal class DefaultClient : Client, WebSocketDelegate {
       precondition(socket!.isConnected, "socket is already connected")
     }
     
-    let (p, fulfill, reject) = Promise<Session>.pending()
+    let (p, r) = Promise<Session>.pending()
     
     wsComponent.queryItems = [
       URLQueryItem.init(name: "token", value: session.token),
@@ -356,12 +356,12 @@ internal class DefaultClient : Client, WebSocketDelegate {
     socket!.timeout = timeout
     socket!.onConnect = {
       if p.isPending {
-        fulfill(session)
+        r.fulfill(session)
       }
     }
     socket!.onDisconnect = { error in
       if p.isPending {
-        reject(error ?? NSError(domain:NakamaError.Domain, code:0, userInfo:nil))
+        r.reject(error ?? NSError(domain:NakamaError.Domain, code:0, userInfo:nil))
       }
       // do not call onDisconnect as it is handled in the delegate
     }
@@ -386,12 +386,12 @@ internal class DefaultClient : Client, WebSocketDelegate {
     let collationID = UUID.init().uuidString
     let payload = message.serialize(collationID: collationID)
     
-    let p  = Promise<T>.pending()
-    self.collationIDs[collationID] = (p.fulfill, p.reject)
+    let (p, r)  = Promise<T>.pending()
+    self.collationIDs[collationID] = (r.fulfill, r.reject)
 
     self.socket!.write(data: payload!)
 
-    return p.promise
+    return p
   }
   
   func send(message: Message) {
