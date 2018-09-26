@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupLeaveMessage : CollatedMessage {
   
   /**
@@ -45,3 +45,4 @@ public struct GroupLeaveMessage : CollatedMessage {
 }
 
 
+*/

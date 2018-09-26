@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct FriendBlockMessage : CollatedMessage {
   public var userIds: [String] = []
 
@@ -42,3 +42,4 @@ public struct FriendBlockMessage : CollatedMessage {
 }
 
 
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupKickUserMessage : CollatedMessage {
   
   /**
@@ -48,4 +48,4 @@ public struct GroupKickUserMessage : CollatedMessage {
   }
 }
 
-
+*/

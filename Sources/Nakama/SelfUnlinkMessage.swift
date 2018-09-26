@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct SelfUnlinkMessage : CollatedMessage {
   private let payload: Server_TUnlink
   
@@ -97,3 +97,4 @@ public struct SelfUnlinkMessage : CollatedMessage {
   }
   
 }
+*/

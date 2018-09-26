@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public protocol Leaderboard : CustomStringConvertible {
   /**
    - Returns: Leaderboard ID
@@ -78,3 +78,4 @@ internal struct DefaultLeaderboard : Leaderboard {
   }
 }
 
+*/

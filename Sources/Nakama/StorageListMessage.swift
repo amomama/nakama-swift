@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct StorageListMessage : CollatedMessage {
   public var userID : String?
   public var bucket: String?
@@ -66,3 +66,4 @@ public struct StorageListMessage : CollatedMessage {
   }
   
 }
+*/

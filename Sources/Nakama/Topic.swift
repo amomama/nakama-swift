@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public enum TopicId : CustomStringConvertible {
   /**
    Direct message between two users
@@ -92,3 +92,4 @@ internal struct DefaultTopic : Topic {
   }
 }
 
+*/

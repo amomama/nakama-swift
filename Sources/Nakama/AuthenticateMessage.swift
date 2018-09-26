@@ -17,56 +17,70 @@
 import Foundation
 
 public struct AuthenticateMessage : Message {
-  private let payload : Server_AuthenticateRequest
+  private let payload : Nakama_Api_AuthenticateGameCenterRequest
+  let endpoint: String
+  let shouldCreate: Bool
   
-  public init(device id:String) {
-    var s = Server_AuthenticateRequest()
-    s.device = id
-    payload = s
-  }
+//  public init(custom id: String, shouldCreate: Bool) {
+//    var s = Server_AuthenticateRequest()
+//    s.custom = id
+//
+//    self.payload = s
+//    self.endpoint = "custom"
+//    self.shouldCreate = shouldCreate
+//  }
+//
+//  public init(facebook token: String, shouldCreate: Bool) {
+//    var s = Server_AuthenticateRequest()
+//    s.facebook = token
+//
+//    self.payload = s
+//    self.endpoint = "facebook"
+//    self.shouldCreate = shouldCreate
+//  }
+//
+//  public init(google token: String, shouldCreate: Bool) {
+//    var s = Server_AuthenticateRequest()
+//    s.google = token
+//
+//    self.payload = s
+//    self.endpoint = "google"
+//    self.shouldCreate = shouldCreate
+//  }
+//
+//  public init(steam token: String, shouldCreate: Bool) {
+//    var proto = Server_AuthenticateRequest()
+//    proto.steam = token
+//
+//    self.payload = proto
+//    self.endpoint = "steam"
+//    self.shouldCreate = shouldCreate
+//  }
+//
+//  public init(email address: String, password: String, shouldCreate: Bool) {
+//    var s = Server_AuthenticateRequest()
+//    s.email = Server_AuthenticateRequest.Email()
+//    s.email.email = address
+//    s.email.password = password
+//
+//    self.payload = s
+//    self.endpoint = "email"
+//    self.shouldCreate = shouldCreate
+//  }
   
-  public init(custom id:String) {
-    var s = Server_AuthenticateRequest()
-    s.custom = id
-    payload = s
-  }
-  
-  public init(facebook token:String) {
-    var s = Server_AuthenticateRequest()
-    s.facebook = token
-    payload = s
-  }
-  
-  public init(google token:String) {
-    var s = Server_AuthenticateRequest()
-    s.google = token
-    payload = s
-  }
-  
-  public init(steam token:String) {
-    var proto = Server_AuthenticateRequest()
-    proto.steam = token
-    payload = proto
-  }
-  
-  public init(email address:String, password:String) {
-    var s = Server_AuthenticateRequest()
-    s.email = Server_AuthenticateRequest.Email()
-    s.email.email = address
-    s.email.password = password
-    payload = s
-  }
-  
-  public init(gamecenter bundleID:String, playerID:String, publicKeyURL:String, salt:String, timestamp:Int, signature:String) {
-    var s = Server_AuthenticateRequest()
-    s.gameCenter = Server_AuthenticateRequest.GameCenter()
-    s.gameCenter.bundleID = bundleID
-    s.gameCenter.playerID = playerID
-    s.gameCenter.publicKeyURL = publicKeyURL
-    s.gameCenter.salt = salt
-    s.gameCenter.timestamp = Int64(timestamp)
-    s.gameCenter.signature = signature
-    payload = s
+  public init(gamecenter bundleID: String, playerID: String, publicKeyURL: String, salt: String, timestamp: UInt64, signature: String, shouldCreate: Bool) {
+    var s = Nakama_Api_AuthenticateGameCenterRequest()
+    s.account = Nakama_Api_AccountGameCenter()
+    s.account.bundleID = bundleID
+    s.account.playerID = playerID
+    s.account.publicKeyURL = publicKeyURL
+    s.account.salt = salt
+    s.account.timestampSeconds = Int64(timestamp)
+    s.account.signature = signature
+    
+    self.payload = s
+    self.endpoint = "gamecenter"
+    self.shouldCreate = shouldCreate
   }
   
   public func serialize() -> Data? {
@@ -74,22 +88,23 @@ public struct AuthenticateMessage : Message {
   }
   
   public var description: String {
-    switch payload.id! {
-    case .device(let device):
-      return String(format: "AuthenticateMessage(device=%@)", device)
-    case .custom(let custom):
-      return String(format: "AuthenticateMessage(custom=%@)", custom)
-    case .facebook(let token):
-      return String(format: "AuthenticateMessage(facebook=%@)", token)
-    case .google(let token):
-      return String(format: "AuthenticateMessage(google=%@)", token)
-    case .steam(let token):
-      return String(format: "AuthenticateMessage(steam=%@)", token)
-    case .email(let email):
-      return String(format: "AuthenticateMessage(email=%@,password=%@)", email.email, email.password)
-    case .gameCenter(let gc):
-      return String(format: "AuthenticateMessage(gamecenter=(bundle_id=%@,player_id=%@,public_key_url=%@,salt=%@,timestamp=%@,signature=%@))", gc.bundleID, gc.playerID, gc.publicKeyURL, gc.salt, gc.timestamp, gc.signature)
-    }
+    return "\(self)"
+//    switch payload.id! {
+//    case .device(let device):
+//      return String(format: "AuthenticateMessage(device=%@)", device)
+//    case .custom(let custom):
+//      return String(format: "AuthenticateMessage(custom=%@)", custom)
+//    case .facebook(let token):
+//      return String(format: "AuthenticateMessage(facebook=%@)", token)
+//    case .google(let token):
+//      return String(format: "AuthenticateMessage(google=%@)", token)
+//    case .steam(let token):
+//      return String(format: "AuthenticateMessage(steam=%@)", token)
+//    case .email(let email):
+//      return String(format: "AuthenticateMessage(email=%@,password=%@)", email.email, email.password)
+//    case .gameCenter(let gc):
+//      return String(format: "AuthenticateMessage(gamecenter=(bundle_id=%@,player_id=%@,public_key_url=%@,salt=%@,timestamp=%@,signature=%@))", gc.bundleID, gc.playerID, gc.publicKeyURL, gc.salt, gc.timestamp, gc.signature)
+//    }
   }
   
 }

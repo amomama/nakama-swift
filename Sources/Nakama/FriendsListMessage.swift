@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct FriendsListMessage : CollatedMessage {
   private let payload: Server_TFriendsList
   public init() {
@@ -33,3 +33,4 @@ public struct FriendsListMessage : CollatedMessage {
     return String(format: "FriendsListMessage()")
   }
 }
+*/

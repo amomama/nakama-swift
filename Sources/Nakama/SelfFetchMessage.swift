@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct SelfFetchMessage : CollatedMessage {
   private let payload: Server_TSelfFetch
   public init() {
@@ -33,3 +33,4 @@ public struct SelfFetchMessage : CollatedMessage {
     return String(format: "SelfFetchMessage()")
   }
 }
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public protocol RPCResult : CustomStringConvertible {
   /**
    - Returns: The Id of the RPC function which was registered in the server.
@@ -42,3 +42,4 @@ internal struct DefaultRPCResult : RPCResult {
     return String(format: "DefaultRPCResult(id=%@,payload=%@)", id, payload ?? "")
   }
 }
+*/

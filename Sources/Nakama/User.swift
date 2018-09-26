@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public protocol User : CustomStringConvertible {
   /**
    - Returns: A URL string which points at an avatar image or similar.
@@ -104,3 +104,4 @@ internal struct DefaultUser : User {
     return String(format: "DefaultUser(avatarURL=%@,createdAt=%d,fullname=%@,handle=%@,id=%@,lang=%@,lastOnlineAt=%d,location=%@,metadata=%@,timezone=%@,updatedAt=%d)", avatarURL, createdAt, fullname, handle, id, lang, lastOnlineAt, location, metadata, timezone, updatedAt)
   }
 }
+*/

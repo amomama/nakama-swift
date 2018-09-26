@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct LeaderboardRecordsFetchMessage : CollatedMessage {
   public var leaderboardIds: [String] = []
   public var limit : Int?
@@ -55,3 +55,4 @@ public struct LeaderboardRecordsFetchMessage : CollatedMessage {
   
 }
 
+*/

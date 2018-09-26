@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupsFetchMessage : CollatedMessage {
   
   public var groupIds: [String] = []
@@ -49,6 +49,4 @@ public struct GroupsFetchMessage : CollatedMessage {
     return String(format: "GroupsFetchMessage(groupIds=%@)", groupIds)
   }
 }
-
-
-
+*/

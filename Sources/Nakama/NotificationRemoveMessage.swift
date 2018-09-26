@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct NotificationRemoveMessage : CollatedMessage {
   public var notificationIds: [String] = []
   
@@ -44,3 +44,4 @@ public struct NotificationRemoveMessage : CollatedMessage {
 
 
 
+*/

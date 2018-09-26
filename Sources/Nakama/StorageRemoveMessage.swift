@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct StorageRemoveMessage : CollatedMessage {
   private var payload = Server_TStorageRemove()
   
@@ -48,3 +48,4 @@ public struct StorageRemoveMessage : CollatedMessage {
   }
   
 }
+*/

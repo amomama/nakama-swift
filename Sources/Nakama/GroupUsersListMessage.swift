@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupUsersListMessage : CollatedMessage {
   
   public var groupID: String
@@ -41,3 +41,4 @@ public struct GroupUsersListMessage : CollatedMessage {
 }
 
 
+*/

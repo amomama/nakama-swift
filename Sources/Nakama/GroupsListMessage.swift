@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupsListMessage : CollatedMessage {
   
   private var lang : String?
@@ -110,3 +110,4 @@ public struct GroupsListMessage : CollatedMessage {
   
 }
 
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public enum GroupState : Int32 {
   case unknown = -1
   
@@ -224,3 +224,4 @@ internal struct DefaultGroupSelf : GroupSelf {
     return String(format: "DefaultGroupSelf(id=%@,privateState=%@,creatorID=%@,name=%@,desc=%@,avatarURL=%@,lang=%@,createdAt=%d,metadata=%@,count=%d,updatedAt=%d,state=%@)", id, privateState.description, creatorID, name, desc, avatarURL, lang, createdAt, metadata, count, updatedAt, state.rawValue)
   }
 }
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct TopicMessageSendMessage : CollatedMessage {
   public var topicId: TopicId
   public var data: Data
@@ -52,3 +52,4 @@ public struct TopicMessageSendMessage : CollatedMessage {
     return String(format: "TopicMessageSendMessage(topicId=%@, data=%@)", topicId.description, String(data: data, encoding: .utf8)!)
   }
 }
+*/

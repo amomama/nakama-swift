@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct StorageWriteMessage : CollatedMessage {
   private var payload = Server_TStorageWrite()
   
@@ -62,3 +62,4 @@ public struct StorageWriteMessage : CollatedMessage {
   }
   
 }
+*/

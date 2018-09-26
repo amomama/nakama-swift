@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct LeaderboardRecordsListMessage : CollatedMessage {
   private var ownerIds : [String]?
   private var ownerID : String?
@@ -161,3 +161,4 @@ public struct LeaderboardRecordsListMessage : CollatedMessage {
 }
 
 
+*/

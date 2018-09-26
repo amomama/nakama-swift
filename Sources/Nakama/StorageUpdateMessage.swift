@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct StorageOp {
   fileprivate var payload = Server_TStorageUpdate.StorageUpdate.UpdateOp()
   
@@ -139,3 +139,4 @@ public struct StorageUpdateMessage : CollatedMessage {
   }
   
 }
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public protocol SelfUser : User {
   /**
    - Returns: The custom ID linked with the user.
@@ -110,3 +110,4 @@ internal struct DefaultSelf : SelfUser {
     return String(format: "DefaultSelf(customID=%@,deviceIDs=%@,email=%@,facebookID=%@,gameCenterID=%@,googleID=%@,steamID=%@,verified=%@,avatarURL=%@,createdAt=%d,fullname=%@,handle=%@,id=%@,lang=%@,lastOnlineAt=%d,location=%@,metadata=%@,timezone=%@,updatedAt=%d)", customID, deviceIDs, email, facebookID, gameCenterID, googleID, steamID, verified.description, avatarURL, createdAt, fullname, handle, id, lang, lastOnlineAt, location, metadata, timezone, updatedAt)
   }
 }
+*/

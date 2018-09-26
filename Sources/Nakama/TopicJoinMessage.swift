@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct TopicJoinMessage : CollatedMessage {
   
   /**
@@ -67,3 +67,4 @@ public struct TopicJoinMessage : CollatedMessage {
     return String(format: "TopicJoinMessage(rooms=%@, groups=%@, userIds=%@)", rooms, groups, userIds)
   }
 }
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public enum TopicMessageType : Int32 {
   case unknown = -1
   case chat = 0
@@ -156,3 +156,4 @@ internal struct DefaultTopicMessageAck : TopicMessageAck {
     return String(format: "DefaultTopicMessageAck(messageID=%@,createdAt=%d,expiresAt=%d,handle=%@,@)", messageID, createdAt, expiresAt, handle)
   }
 }
+*/

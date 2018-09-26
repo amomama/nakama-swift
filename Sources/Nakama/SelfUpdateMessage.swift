@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct SelfUpdateMessage : CollatedMessage {
   public var handle : String?
   public var fullname: String?
@@ -75,3 +75,4 @@ public struct SelfUpdateMessage : CollatedMessage {
   }
   
 }
+*/

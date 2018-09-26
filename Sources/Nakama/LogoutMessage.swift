@@ -16,7 +16,7 @@
 
 import Foundation
 import SwiftProtobuf
-
+/*
 public struct LogoutMessage : Message {
   private let payload: Server_Envelope = LogoutMessage.build()
   
@@ -34,3 +34,4 @@ public struct LogoutMessage : Message {
     return String(format: "DefaultLogoutMessage()")
   }
 }
+*/

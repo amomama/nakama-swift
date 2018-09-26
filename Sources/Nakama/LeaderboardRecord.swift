@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public protocol LeaderboardRecord : CustomStringConvertible {
   /**
    - Returns: Leaderboard ID
@@ -117,3 +117,4 @@ internal struct DefaultLeaderboardRecord : LeaderboardRecord {
 }
 
 
+*/

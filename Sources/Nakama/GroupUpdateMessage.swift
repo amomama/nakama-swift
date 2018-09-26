@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupUpdateMessage : CollatedMessage {
   /**
    NOTE: The server only processes the first item of the list, and will ignore and logs a warning message for other items.
@@ -87,3 +87,4 @@ public struct GroupUpdate : CustomStringConvertible {
     return String(format: "GroupUpdate(groupID=%@,name=%@, description=%@, avatarURL=%@, lang=%@, metadata=%@, private=%@)", groupID, name ?? "", desc ?? "", avatarURL ?? "", lang ?? "", _metadata, privateGroup?.description ?? "false")
   }
 }
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupPromoteUserMessage : CollatedMessage {
   
   /**
@@ -50,3 +50,4 @@ public struct GroupPromoteUserMessage : CollatedMessage {
 
 
 
+*/

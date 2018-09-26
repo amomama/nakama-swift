@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct RPCMessage : CollatedMessage {
   public var payload: Data?
   private let id: String
@@ -47,3 +47,4 @@ public struct RPCMessage : CollatedMessage {
     return String(format: "RPCMessage(id=%@,payload=%@)", id, _payload)
   }
 }
+*/

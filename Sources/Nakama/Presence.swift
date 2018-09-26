@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public protocol UserPresence : CustomStringConvertible {
   /**
    User ID of this presence
@@ -87,3 +87,4 @@ internal struct DefaultTopicPresence : TopicPresence {
     return String(format: "DefaultTopicPresence(topic=%@,join=%@,leave=%@)", topic.description, join.description, leave.description)
   }
 }
+*/

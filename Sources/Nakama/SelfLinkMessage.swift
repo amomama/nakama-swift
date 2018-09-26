@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct SelfLinkMessage : CollatedMessage {
   private let payload: Server_TLink
   
@@ -104,3 +104,4 @@ public struct SelfLinkMessage : CollatedMessage {
   }
   
 }
+*/

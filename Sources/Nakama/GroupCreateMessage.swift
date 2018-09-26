@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupCreateMessage : CollatedMessage {
   /**
    NOTE: The server only processes the first item of the list, and will ignore and logs a warning message for other items.
@@ -84,3 +84,4 @@ public struct GroupCreate : CustomStringConvertible {
   }
 }
 
+*/

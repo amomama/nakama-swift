@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct TopicMessagesListMessage : CollatedMessage {
   private var userID: String?
   private var room: String?
@@ -71,3 +71,4 @@ public struct TopicMessagesListMessage : CollatedMessage {
     return String(format: "NotificationListMessage(userID=%@,room=%@,groupID=%@,forward=%@,limit=%d,cursor=%@)", userID ?? "", room ?? "", groupID ?? "", forward?.description ?? "unset", limit ?? 0, cursor ?? "")
   }
 }
+*/

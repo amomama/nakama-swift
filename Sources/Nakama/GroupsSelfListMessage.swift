@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct GroupsSelfListMessage : CollatedMessage {
   private let payload: Server_TGroupsSelfList
   public init() {
@@ -34,3 +34,4 @@ public struct GroupsSelfListMessage : CollatedMessage {
   }
 }
 
+*/

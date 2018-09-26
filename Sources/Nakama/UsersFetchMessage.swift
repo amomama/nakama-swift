@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct UsersFetchMessage : CollatedMessage {
   public var handles : [String] = []
   public var userIDs: [String] = []
@@ -49,3 +49,4 @@ public struct UsersFetchMessage : CollatedMessage {
   }
   
 }
+*/

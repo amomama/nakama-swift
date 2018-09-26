@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct FriendAddMessage : CollatedMessage {
   public var handles : [String] = []
   public var userIds: [String] = []
@@ -51,3 +51,4 @@ public struct FriendAddMessage : CollatedMessage {
 
 }
 
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public enum PermissionRead : Int32 {
   case unknown = -1
   case noRead = 0
@@ -125,3 +125,4 @@ internal struct DefaultStorageRecord : StorageRecord {
     return String(format: "DefaultStorageRecord(bucket=%@,collection=%d,key=%@,version=%@,createdAt=%d,expiresAt=%d,permissionRead=%@,permissionWrite=%@,value=%@,updatedAt=%d,userId=%@)", bucket, collection, key, version, createdAt, expiresAt, permissionRead.rawValue, permissionWrite.rawValue, value, updatedAt, userID)
   }
 }
+*/

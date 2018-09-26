@@ -116,15 +116,15 @@ public protocol Client {
    */
   var onError: ((NakamaError) -> Void)? { get set }
   
-  /**
-   This is invoked when a new topic message is received.
-   */
-  var onTopicMessage: ((TopicMessage) -> Void)? { get set }
-  
-  /**
-   This is invoked when a new topic presence update is received.
-   */
-  var onTopicPresence: ((TopicPresence) -> Void)? { get set }
+//  /**
+//   This is invoked when a new topic message is received.
+//   */
+//  var onTopicMessage: ((TopicMessage) -> Void)? { get set }
+//
+//  /**
+//   This is invoked when a new topic presence update is received.
+//   */
+//  var onTopicPresence: ((TopicPresence) -> Void)? { get set }
   
   /**
    This is invoked when a new notification is received.
@@ -136,12 +136,6 @@ public protocol Client {
    - Returns: A {@code Session} for the user.
    */
   func login(with message: AuthenticateMessage) -> Promise<Session>
-  
-  /**
-   - Parameter message : message The {@code AuthenticateMessage} to send to the server.
-   - Returns: A {@code Session} for the user.
-   */
-  func register(with message: AuthenticateMessage) -> Promise<Session>
   
   /**
    - Parameter session : session The {@code Session} to connect the socket with.
@@ -164,43 +158,43 @@ public protocol Client {
    - Parameter <T>: The expected return type.
    - Returns: An instance of the expected return type.
    */
-  func send(message: UsersFetchMessage) -> Promise<[User]>
-  func send(message: SelfFetchMessage) -> Promise<SelfUser>
-  func send(message: SelfUpdateMessage) -> Promise<Void>
-  func send(message: SelfLinkMessage) -> Promise<Void>
-  func send(message: SelfUnlinkMessage) -> Promise<Void>
-  func send(message: RPCMessage) -> Promise<RPCResult>
-  func send(message: StorageFetchMessage) -> Promise<[StorageRecord]>
-  func send(message: StorageListMessage) -> Promise<[StorageRecord]>
-  func send(message: StorageRemoveMessage) -> Promise<Void>
-  func send(message: StorageWriteMessage) -> Promise<[StorageRecordID]>
-  func send(message: StorageUpdateMessage) -> Promise<[StorageRecordID]>
-  func send(message: FriendAddMessage) -> Promise<Void>
-  func send(message: FriendBlockMessage) -> Promise<Void>
-  func send(message: FriendRemoveMessage) -> Promise<Void>
-  func send(message: FriendsListMessage) -> Promise<[Friend]>
-  func send(message: NotificationRemoveMessage) -> Promise<Void>
-  func send(message: NotificationListMessage) -> Promise<[Notification]>
-  func send(message: TopicJoinMessage) -> Promise<[Topic]>
-  func send(message: TopicLeaveMessage) -> Promise<Void>
-  func send(message: TopicMessageSendMessage) -> Promise<TopicMessageAck>
-  func send(message: TopicMessagesListMessage) -> Promise<[TopicMessage]>
-  func send(message: GroupAddUserMessage) -> Promise<Void>
-  func send(message: GroupCreateMessage) -> Promise<[Group]>
-  func send(message: GroupJoinMessage) -> Promise<Void>
-  func send(message: GroupKickUserMessage) -> Promise<Void>
-  func send(message: GroupLeaveMessage) -> Promise<Void>
-  func send(message: GroupPromoteUserMessage) -> Promise<Void>
-  func send(message: GroupRemoveMessage) -> Promise<Void>
-  func send(message: GroupsFetchMessage) -> Promise<[Group]>
-  func send(message: GroupsListMessage) -> Promise<[Group]>
-  func send(message: GroupsSelfListMessage) -> Promise<[GroupSelf]>
-  func send(message: GroupUpdateMessage) -> Promise<Void>
-  func send(message: GroupUsersListMessage) -> Promise<[GroupUser]>
-  func send(message: LeaderboardRecordsFetchMessage) -> Promise<[LeaderboardRecord]>
-  func send(message: LeaderboardRecordsListMessage) -> Promise<[LeaderboardRecord]>
-  func send(message: LeaderboardRecordWriteMessage) -> Promise<[LeaderboardRecord]>
-  func send(message: LeaderboardsListMessage) -> Promise<[Leaderboard]>
+//  func send(message: UsersFetchMessage) -> Promise<[User]>
+//  func send(message: SelfFetchMessage) -> Promise<SelfUser>
+//  func send(message: SelfUpdateMessage) -> Promise<Void>
+//  func send(message: SelfLinkMessage) -> Promise<Void>
+//  func send(message: SelfUnlinkMessage) -> Promise<Void>
+//  func send(message: RPCMessage) -> Promise<RPCResult>
+//  func send(message: StorageFetchMessage) -> Promise<[StorageRecord]>
+//  func send(message: StorageListMessage) -> Promise<[StorageRecord]>
+//  func send(message: StorageRemoveMessage) -> Promise<Void>
+//  func send(message: StorageWriteMessage) -> Promise<[StorageRecordID]>
+//  func send(message: StorageUpdateMessage) -> Promise<[StorageRecordID]>
+//  func send(message: FriendAddMessage) -> Promise<Void>
+//  func send(message: FriendBlockMessage) -> Promise<Void>
+//  func send(message: FriendRemoveMessage) -> Promise<Void>
+//  func send(message: FriendsListMessage) -> Promise<[Friend]>
+//  func send(message: NotificationRemoveMessage) -> Promise<Void>
+//  func send(message: NotificationListMessage) -> Promise<[Notification]>
+//  func send(message: TopicJoinMessage) -> Promise<[Topic]>
+//  func send(message: TopicLeaveMessage) -> Promise<Void>
+//  func send(message: TopicMessageSendMessage) -> Promise<TopicMessageAck>
+//  func send(message: TopicMessagesListMessage) -> Promise<[TopicMessage]>
+//  func send(message: GroupAddUserMessage) -> Promise<Void>
+//  func send(message: GroupCreateMessage) -> Promise<[Group]>
+//  func send(message: GroupJoinMessage) -> Promise<Void>
+//  func send(message: GroupKickUserMessage) -> Promise<Void>
+//  func send(message: GroupLeaveMessage) -> Promise<Void>
+//  func send(message: GroupPromoteUserMessage) -> Promise<Void>
+//  func send(message: GroupRemoveMessage) -> Promise<Void>
+//  func send(message: GroupsFetchMessage) -> Promise<[Group]>
+//  func send(message: GroupsListMessage) -> Promise<[Group]>
+//  func send(message: GroupsSelfListMessage) -> Promise<[GroupSelf]>
+//  func send(message: GroupUpdateMessage) -> Promise<Void>
+//  func send(message: GroupUsersListMessage) -> Promise<[GroupUser]>
+//  func send(message: LeaderboardRecordsFetchMessage) -> Promise<[LeaderboardRecord]>
+//  func send(message: LeaderboardRecordsListMessage) -> Promise<[LeaderboardRecord]>
+//  func send(message: LeaderboardRecordWriteMessage) -> Promise<[LeaderboardRecord]>
+//  func send(message: LeaderboardsListMessage) -> Promise<[Leaderboard]>
   
   /**
    - Parameter message : message The message to send.
@@ -214,8 +208,8 @@ internal class DefaultClient : Client, WebSocketDelegate {
   private let timeout: Int
   private let trace: Bool
   
-  private let loginUrl: URL
-  private let registerUrl: URL
+  private let apiVersion = "v2"
+  private let authUrl: URL
   
   private var wsComponent: URLComponents
   private var socket : WebSocket?
@@ -224,8 +218,8 @@ internal class DefaultClient : Client, WebSocketDelegate {
   
   var onDisconnect: ((Error?) -> Void)?
   var onError: ((NakamaError) -> Void)?
-  var onTopicMessage: ((TopicMessage) -> Void)?
-  var onTopicPresence: ((TopicPresence) -> Void)?
+//  var onTopicMessage: ((TopicMessage) -> Void)?
+//  var onTopicPresence: ((TopicPresence) -> Void)?
   var onNotification: ((Notification) -> Void)?
   
   var serverTime: Int {
@@ -245,11 +239,8 @@ internal class DefaultClient : Client, WebSocketDelegate {
     urlComponent.port = port
     urlComponent.scheme = ssl ? "https" : "http"
     
-    urlComponent.path = "/user/login"
-    self.loginUrl = urlComponent.url!
-    
-    urlComponent.path = "/user/register"
-    self.registerUrl = urlComponent.url!
+    urlComponent.path = "/\(apiVersion)/account/authenticate"
+    self.authUrl = urlComponent.url!
     
     self.wsComponent = URLComponents()
     self.wsComponent.host = host
@@ -274,19 +265,20 @@ internal class DefaultClient : Client, WebSocketDelegate {
   }
   
   func websocketDidReceiveData(socket: WebSocket, data: Data) {
-    process(data: data)
-  }
-  
-  func register(with message: AuthenticateMessage) -> Promise<Session> {
-    return self.authenticate(path: registerUrl, message: message)
+    // TODO: track it
+    fatalError("websocketDidReceiveData")
+//    process(data: data)
   }
   
   func login(with message: AuthenticateMessage) -> Promise<Session> {
-    return self.authenticate(path: loginUrl, message: message)
+    return self.authenticate(path: authUrl.appendingPathComponent(message.endpoint), message: message)
   }
   
   fileprivate func authenticate(path: URL, message: AuthenticateMessage) -> Promise<Session> {
-    var request = URLRequest(url: path)
+    var components = URLComponents(url: path, resolvingAgainstBaseURL: true)!
+    components.queryItems = [URLQueryItem(name: "create", value: String(message.shouldCreate))]
+    
+    var request = URLRequest(url: components.url!)
     request.httpMethod = "POST"
     request.httpBody = message.serialize()
     
@@ -322,17 +314,17 @@ internal class DefaultClient : Client, WebSocketDelegate {
         return
       }
       
-      let authResponse = try! Server_AuthenticateResponse(serializedData: data!)
+      let authResponse = try! Nakama_Api_AuthenticateGameCenterRequest(serializedData: data!)
       if self.trace {
         NSLog("Authenticate response: %@", authResponse.debugDescription);
       }
       
-      switch authResponse.id! {
-      case .error(let err):
-        r.reject(NakamaError.make(from: err.code, msg: err.message))
-      case .session(let s):
-        r.fulfill(DefaultSession(token: s.token))
-      }
+//      switch authResponse.id! {
+//      case .error(let err):
+//        r.reject(NakamaError.make(from: err.code, msg: err.message))
+//      case .session(let s):
+//        r.fulfill(DefaultSession(token: s.token))
+//      }
     }).resume()
     return p
   }
@@ -379,7 +371,9 @@ internal class DefaultClient : Client, WebSocketDelegate {
   }
 
   func logout() {
-    self.send(message: LogoutMessage.init())
+    // TODO fix it
+    fatalError("logout")
+//    self.send(message: LogoutMessage.init())
   }
   
   fileprivate func send<T>(proto message: CollatedMessage) -> Promise<T> {
@@ -399,154 +393,154 @@ internal class DefaultClient : Client, WebSocketDelegate {
     self.socket?.write(data: binaryData)
   }
   
-  func send(message: UsersFetchMessage) -> Promise<[User]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: SelfFetchMessage) -> Promise<SelfUser> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: SelfUpdateMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: SelfLinkMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: SelfUnlinkMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: RPCMessage) -> Promise<RPCResult> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: StorageFetchMessage) -> Promise<[StorageRecord]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: StorageListMessage) -> Promise<[StorageRecord]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: StorageRemoveMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: StorageWriteMessage) -> Promise<[StorageRecordID]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: StorageUpdateMessage) -> Promise<[StorageRecordID]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: FriendAddMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: FriendBlockMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: FriendRemoveMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: FriendsListMessage) -> Promise<[Friend]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: NotificationRemoveMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: NotificationListMessage) -> Promise<[Notification]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: TopicJoinMessage) -> Promise<[Topic]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: TopicLeaveMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: TopicMessageSendMessage) -> Promise<TopicMessageAck> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: TopicMessagesListMessage) -> Promise<[TopicMessage]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupAddUserMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupCreateMessage) -> Promise<[Group]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupJoinMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupKickUserMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupLeaveMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupPromoteUserMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupRemoveMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupsFetchMessage) -> Promise<[Group]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupsListMessage) -> Promise<[Group]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupsSelfListMessage) -> Promise<[GroupSelf]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupUpdateMessage) -> Promise<Void> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: GroupUsersListMessage) -> Promise<[GroupUser]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: LeaderboardRecordsFetchMessage) -> Promise<[LeaderboardRecord]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: LeaderboardRecordsListMessage) -> Promise<[LeaderboardRecord]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: LeaderboardRecordWriteMessage) -> Promise<[LeaderboardRecord]> {
-    return self.send(proto: message)
-  }
-  
-  func send(message: LeaderboardsListMessage) -> Promise<[Leaderboard]> {
-    return self.send(proto: message)
-  }
-  
+//  func send(message: UsersFetchMessage) -> Promise<[User]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: SelfFetchMessage) -> Promise<SelfUser> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: SelfUpdateMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: SelfLinkMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: SelfUnlinkMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: RPCMessage) -> Promise<RPCResult> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: StorageFetchMessage) -> Promise<[StorageRecord]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: StorageListMessage) -> Promise<[StorageRecord]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: StorageRemoveMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: StorageWriteMessage) -> Promise<[StorageRecordID]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: StorageUpdateMessage) -> Promise<[StorageRecordID]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: FriendAddMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: FriendBlockMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: FriendRemoveMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: FriendsListMessage) -> Promise<[Friend]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: NotificationRemoveMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: NotificationListMessage) -> Promise<[Notification]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: TopicJoinMessage) -> Promise<[Topic]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: TopicLeaveMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: TopicMessageSendMessage) -> Promise<TopicMessageAck> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: TopicMessagesListMessage) -> Promise<[TopicMessage]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupAddUserMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupCreateMessage) -> Promise<[Group]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupJoinMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupKickUserMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupLeaveMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupPromoteUserMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupRemoveMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupsFetchMessage) -> Promise<[Group]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupsListMessage) -> Promise<[Group]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupsSelfListMessage) -> Promise<[GroupSelf]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupUpdateMessage) -> Promise<Void> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: GroupUsersListMessage) -> Promise<[GroupUser]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: LeaderboardRecordsFetchMessage) -> Promise<[LeaderboardRecord]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: LeaderboardRecordsListMessage) -> Promise<[LeaderboardRecord]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: LeaderboardRecordWriteMessage) -> Promise<[LeaderboardRecord]> {
+//    return self.send(proto: message)
+//  }
+//
+//  func send(message: LeaderboardsListMessage) -> Promise<[Leaderboard]> {
+//    return self.send(proto: message)
+//  }
+  /*
   fileprivate func process(data: Data) {
     let envelope = try! Server_Envelope(serializedData: data)
     
@@ -704,5 +698,5 @@ internal class DefaultClient : Client, WebSocketDelegate {
         NSLog("No matching promise for incoming message: %@", (try? envelope.jsonString()) ?? "nil");
       }
     }
-  }
+  }*/
 }

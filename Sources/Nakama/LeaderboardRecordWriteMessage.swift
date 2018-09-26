@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct LeaderboardRecordWriteMessage : CollatedMessage {
   
   /**
@@ -160,3 +160,4 @@ public struct LeaderboardRecordWrite : CustomStringConvertible {
     return String(format: "LeaderboardRecordWrite(leaderboardID=%@,location=%@,timezone=%@,metadata=%@,increment=%d,decrement=%d,set=%d,best=%d)", leaderboardID, location ?? "", timezone ?? "", _metadata, increment ?? 0, decrement ?? 0, set ?? 0, best ?? 0)
   }
 }
+*/

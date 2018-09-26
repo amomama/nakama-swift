@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct TopicLeaveMessage : CollatedMessage {
   
   /**
@@ -55,3 +55,4 @@ public struct TopicLeaveMessage : CollatedMessage {
   }
 }
 
+*/

@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct StorageFetchMessage : CollatedMessage {
   private var payload = Server_TStorageFetch()
   
@@ -48,3 +48,4 @@ public struct StorageFetchMessage : CollatedMessage {
   }
   
 }
+*/

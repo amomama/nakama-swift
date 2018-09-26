@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public struct NotificationListMessage : CollatedMessage {
   public var cursor: String?
   public var limit : Int
@@ -44,3 +44,4 @@ public struct NotificationListMessage : CollatedMessage {
   
 }
 
+*/

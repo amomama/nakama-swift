@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 /**
   The composite identifier which represents a record from the storage engine.
  */
@@ -58,3 +58,4 @@ internal struct DefaultStorageRecordID : StorageRecordID {
     return String(format: "DefaultStorageRecordID(bucket=%@,collection=%d,key=%@,version=%@)", bucket, collection, key, version)
   }
 }
+*/

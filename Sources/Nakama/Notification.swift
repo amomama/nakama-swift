@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public protocol Notification : CustomStringConvertible {
   /**
    Unique ID of this notification
@@ -90,3 +90,4 @@ internal struct DefaultNotification : Notification {
     return String(format: "DefaultNotification(id=%@,subject=%@,content=%@,code=%d,senderID=%@,createdAt=%d,expiresAt=%d,persistent=%@)", id, subject, content, code, senderID ?? "", createdAt, expiresAt, persistent.description)
   }
 }
+*/

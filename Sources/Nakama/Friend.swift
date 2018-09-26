@@ -15,7 +15,7 @@
  */
 
 import Foundation
-
+/*
 public enum FriendState : Int32 {
   case unknown = -1
   
@@ -96,3 +96,4 @@ internal struct DefaultFriend : Friend {
     return String(format: "DefaultFriend(avatarURL=%@,createdAt=%d,fullname=%@,handle=%@,id=%@,lang=%@,lastOnlineAt=%d,location=%@,metadata=%@,timezone=%@,updatedAt=%d,state=%@)", avatarURL, createdAt, fullname, handle, id, lang, lastOnlineAt, location, metadata, timezone, updatedAt, state.rawValue)
   }
 }
+*/
